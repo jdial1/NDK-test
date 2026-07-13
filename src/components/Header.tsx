@@ -1,5 +1,4 @@
 import React from 'react';
-import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface HeaderProps {
@@ -11,101 +10,81 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
   const [isOpen, setIsOpen] = React.useState(false);
 
   const navItems = [
-    { id: 'curatorial', label: 'Curatorial' },
-    { id: 'writing', label: 'Writing & Essays' },
+    { id: 'about', label: 'About' },
     { id: 'press', label: 'Selected Press' },
-    { id: 'biography', label: 'Biography' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'exhibitions', label: 'Selected Exhibitions' },
+    { id: 'writing', label: 'Selected Writing' },
   ];
 
-  return (
-    <header className="sticky top-0 z-50 bg-[#faf9f5]/80 backdrop-blur-md border-b border-[#ece8df]">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Brand Logo */}
-        <button
-          onClick={() => {
-            setActiveSection('home');
-            setIsOpen(false);
-          }}
-          className="text-left group cursor-pointer focus:outline-none"
-          id="btn-brand-logo"
-        >
-          <h1 className="font-serif text-xl md:text-2xl tracking-widest text-[#1a1917] font-semibold uppercase transition-colors duration-300 group-hover:text-[#827b72]">
-            Nicole Dial-Kay
-          </h1>
-          <p className="font-sans text-[10px] md:text-xs tracking-[0.25em] text-[#827b72] uppercase mt-0.5">
-            Curator of Exhibitions & Collections
-          </p>
-        </button>
+  React.useEffect(() => {
+    document.body.classList.toggle('menu-open', isOpen);
+    return () => document.body.classList.remove('menu-open');
+  }, [isOpen]);
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-10">
+  React.useEffect(() => {
+    setIsOpen(false);
+  }, [activeSection]);
+
+  return (
+    <>
+      <header className="nav-desktop">
+        <nav aria-label="Primary">
           {navItems.map((item) => (
             <button
               key={item.id}
+              type="button"
               onClick={() => setActiveSection(item.id)}
-              className="relative py-2 font-sans text-xs tracking-widest uppercase font-medium cursor-pointer focus:outline-none"
-              id={`nav-item-${item.id}`}
+              className={`nav-link ${activeSection === item.id ? 'is-active' : ''}`}
             >
-              <span
-                className={`transition-colors duration-300 ${
-                  activeSection === item.id ? 'text-[#1a1917]' : 'text-[#827b72] hover:text-[#1a1917]'
-                }`}
-              >
-                {item.label}
-              </span>
-              {activeSection === item.id && (
-                <motion.div
-                  layoutId="activeUnderline"
-                  className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-[#1a1917]"
-                  transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                />
-              )}
+              {item.label}
             </button>
           ))}
         </nav>
+      </header>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-[#1a1917] hover:text-[#827b72] transition-colors focus:outline-none cursor-pointer"
-          aria-label="Toggle menu"
-          id="btn-mobile-menu"
-        >
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-      </div>
-
-      {/* Mobile Drawer */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-[#f4f2ea] border-b border-[#ece8df] overflow-hidden"
+      <header className="nav-mobile fixed top-0 left-0 right-0 z-[100] bg-white border-b border-[#eee]">
+        <div className="flex items-center justify-between px-[15px] h-[52px]">
+          <span className="text-[13px] text-[#666] truncate pr-4">
+            {navItems.find((item) => item.id === activeSection)?.label ?? 'Menu'}
+          </span>
+          <button
+            type="button"
+            onClick={() => setIsOpen((open) => !open)}
+            className="nav-link !border-0 text-[14px] shrink-0"
+            aria-expanded={isOpen}
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
           >
-            <div className="px-6 py-6 flex flex-col space-y-4">
+            {isOpen ? 'Close' : 'Menu'}
+          </button>
+        </div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.nav
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 top-[52px] bg-[rgba(0,0,0,0.94)] overflow-y-auto"
+              aria-label="Mobile"
+            >
               {navItems.map((item) => (
                 <button
                   key={item.id}
+                  type="button"
                   onClick={() => {
                     setActiveSection(item.id);
                     setIsOpen(false);
                   }}
-                  className={`py-3 text-left font-sans text-xs tracking-widest uppercase font-semibold transition-colors ${
-                    activeSection === item.id ? 'text-[#1a1917] pl-2 border-l-2 border-[#1a1917]' : 'text-[#827b72] hover:text-[#1a1917]'
+                  className={`block w-full text-left text-[16px] px-[15px] py-[16px] border-t border-white/15 bg-transparent cursor-pointer ${
+                    activeSection === item.id ? 'text-white/55' : 'text-white'
                   }`}
-                  id={`mobile-nav-${item.id}`}
                 >
                   {item.label}
                 </button>
               ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+            </motion.nav>
+          )}
+        </AnimatePresence>
+      </header>
+    </>
   );
 }

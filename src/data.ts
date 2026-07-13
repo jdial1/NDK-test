@@ -1,12 +1,10 @@
 import { Exhibition, Writing, Press, Experience, Education, PastHarwoodExhibition } from './types';
 
-// Image paths from our generated assets and her actual portrait imagery
 export const IMAGES = {
   portrait: 'https://harwoodmuseum.org/wp-content/uploads/Nicole.jpg',
-  portraitLinkedIn: 'https://media.licdn.com/dms/image/v2/D5603AQH2upo9Rveg5w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1679066601179?e=1785369600&v=beta&t=A50zNVh74p3MCVDS0QteEch2fSVa6NSdyXue2mCrADE',
-  outOfTheBox: '/src/assets/images/exhibition_out_of_the_box_1783962603646.jpg',
-  debbieLong: '/src/assets/images/exhibition_debbie_long_1783962618833.jpg',
-  gusFoster: '/src/assets/images/exhibition_gus_foster_1783962633891.jpg',
+  outOfTheBox: 'https://harwoodmuseum.org/wp-content/uploads/harwood-featured-final.png',
+  debbieLong: 'https://harwoodmuseum.org/wp-content/uploads/LEAD1.D-Willa-in-Landscape-700-pxls-wide.jpg',
+  gusFoster: 'https://harwoodmuseum.org/wp-content/uploads/gus-foster-featured-image.jpg',
 };
 
 export const bioSummary = `Nicole Dial-Kay is an art curator, museum professional, and writer based in Taos, New Mexico. She currently serves as the Curator of Exhibitions and Collections at the Harwood Museum of Art of the University of New Mexico, where she oversees a collection of over 4,700 works spanning historic Hispanic devotional art, the Taos Society of Artists, Taos Moderns, and contemporary regional expressions. 
@@ -28,7 +26,7 @@ export const exhibitionsData: Exhibition[] = [
     image: IMAGES.outOfTheBox,
     description: 'The centerpiece of the Harwood Museum of Art’s centennial year, Out of the Box is a comprehensive multi-gallery exhibition showcasing rarely seen treasures from the museum’s permanent collection. Curated by Nicole Dial-Kay, the exhibition charts 100 years of artistic innovation in Taos, NM, bridging the historic Taos Society of Artists, traditional Northern New Mexico Devotional Art, Mid-century Taos Moderns, and contemporary Native and Hispanic expressions.',
     link: 'https://harwoodmuseum.org/exhibition/centennial/',
-    reviewUrl: 'https://southwestcontemporary.com/harwood-museum-of-art-at-100-looking-forward-looking-back-taos-nm/',
+    reviewUrl: 'https://southwestcontemporary.com/harwood-at-100/',
     reviewLabel: 'Southwest Contemporary Feature Review',
     details: [
       'Presents over 150 works of art, many of which have never before been exhibited publicly, representing the museum\'s 4,700-object permanent collection.',
@@ -49,9 +47,9 @@ export const exhibitionsData: Exhibition[] = [
     featured: true,
     image: IMAGES.debbieLong,
     description: 'A site-specific solo exhibition of Taos-based artist Debbie Long’s immersive light-and-space installation, Light-House. The installation features a custom-built, hand-crafted wooden vessel. The interior of the structure is embedded with custom-cast hand-blown glass lenses and windows. As daylight shifts outside, these optical elements capture, bend, and project vibrant colored light patterns that travel across the chamber, inviting deep somatic contemplation of natural cosmic cycles.',
-    link: 'https://harwoodmuseum.org/exhibition/debbie-long-light-house/',
-    reviewUrl: 'https://southwestcontemporary.com/debbie-long-light-house-at-the-harwood-museum-of-art/',
-    reviewLabel: 'Southwest Contemporary Review',
+    link: 'https://harwoodmuseum.org/exhibition/debbie-long-light-ships/',
+    reviewUrl: 'https://hyperallergic.com/debbie-long-turns-rvs-into-vessels-of-light/',
+    reviewLabel: 'Hyperallergic Review',
     details: [
       'Staged inside the Harwood\'s contemporary gallery, placing Long\'s practice in dialogue with the historic West Coast Light and Space movement.',
       'Accompanied by a comprehensive curatorial essay and gallery guide authored by Nicole Dial-Kay, detailing the physical and spiritual mechanics of daylight in the Southwest.',
@@ -70,9 +68,9 @@ export const exhibitionsData: Exhibition[] = [
     featured: true,
     image: IMAGES.gusFoster,
     description: 'A comprehensive retrospective of Taos photographer Gus Foster’s monumental panoramic landscape photography. Utilizing a vintage 1940s Cirkut panoramic camera, Foster captures stunning 360-degree exposures on continuous rolls of film. Tracing Foster’s fifty-year artistic journey, this exhibition, curated by Nicole Dial-Kay, documents Foster’s alpine series capturing Rocky Mountain summits, vast midwestern plains, and historic Southwest architecture.',
-    link: 'https://harwoodmuseum.org/exhibition/gus-foster-plaza-peaks-and-plains/',
-    reviewUrl: 'https://www.taosnews.com/la-vida/retro-gus-foster/article_3f58e4fa-4b82-11ed-b570-3351d5c21ec1.html',
-    reviewLabel: 'The Taos News Retrospective Review',
+    link: 'https://harwoodmuseum.org/exhibition/gus-foster-panoramic-photographs-of-northern-new-mexico/',
+    reviewUrl: 'https://www.taosnews.com/magazines/artes-tradiciones/fostering-the-land/article_456cf014-2554-11ec-817d-77e2c57a5f31.html',
+    reviewLabel: 'The Taos News Artes Review',
     details: [
       'Highlights epic landscape prints reaching up to 10 feet in length, mounted in custom panoramic display frames.',
       'Features a curated selection of Foster\'s vintage cameras, field notebooks, maps, and archival materials, showcasing the rigorous logistical planning behind each photograph.',
@@ -88,13 +86,13 @@ export const exhibitionsData: Exhibition[] = [
     location: 'Breckenridge Creative Arts, Breckenridge, CO',
     category: 'Festival',
     featured: false,
-    image: IMAGES.debbieLong, // Fallback image or beautiful illustration
+    image: IMAGES.debbieLong,
     description: 'An annual four-day festival curated by Breckenridge Creative Arts featuring large-scale, interactive contemporary light installations, digital art, projections, and spatial soundscapes by international and national artists. As Director of Exhibitions, Dial-Kay led the curation of centerpiece installations, converting the historic Blue River Plaza and waterfront parks into a massive, open-air contemporary art museum.',
-    link: 'https://breckcreate.org/wave/',
-    reviewUrl: 'https://www.summitdaily.com/entertainment/wave-festival-returns-to-breckenridge-with-light-water-and-sound-installations/',
+    link: 'https://breckcreate.org/festivals',
+    reviewUrl: 'https://www.summitdaily.com/explore-summit/wave-art-festival-makes-a-splash-in-breckenridge-next-week-with-interactive-installations/',
     reviewLabel: 'Summit Daily Press Review',
     details: [
-      'Attracted over 40,000 visitors annually, positioning Breckenridge as a leading hub for mountain public contemporary art.',
+      'Positioned Breckenridge as a hub for mountain public contemporary art through large-scale riverfront installations.',
       'Commissioned works and site-specific installations by pioneering artists including Craig Walsh, Studio Glimmer, and Janet Echelman.',
       'Designed and facilitated integrated public programs, including panels on environmental art, digital media in public spaces, and artist-led workshops.'
     ]
@@ -108,11 +106,11 @@ export const exhibitionsData: Exhibition[] = [
     location: 'Harwood Museum of Art, Taos, NM',
     category: 'Historical',
     featured: false,
-    image: IMAGES.outOfTheBox, // Fallback image
+    image: IMAGES.outOfTheBox,
     description: 'An ongoing, dynamic series of permanent collection reinstallations curated by Nicole Dial-Kay. The series establishes visual and conceptual conversations between mid-century Taos Moderns (including Agnes Martin, Clay Spohn, Emil Bisttram, Beatrice Mandelman, and Louis Ribak) and living contemporary artists working in New Mexico today.',
-    link: 'https://harwoodmuseum.org/exhibition/in-the-dialogue-taos-moderns-and-contemporary-abstraction/',
-    reviewUrl: 'https://harwoodmuseum.org/exhibition/in-the-dialogue-taos-moderns-and-contemporary-abstraction/',
-    reviewLabel: 'Official Curatorial Gallery Frame',
+    link: 'https://harwoodmuseum.org/art/collections/taos-moderns/',
+    reviewUrl: 'https://harwoodmuseum.org/art/collections/taos-moderns/',
+    reviewLabel: 'Taos Moderns Permanent Collection',
     details: [
       'Disrupts traditional linear art histories to showcase Northern New Mexico\'s enduring legacy as a sanctuary for radical abstraction.',
       'Curates thematic gallery rotations focusing on light, geometry, spirituality, and landscape materials.',
@@ -130,7 +128,7 @@ export const writingsData: Writing[] = [
     type: 'Exhibition Catalogue Chapters',
     excerpt: ' Northern New Mexico has long served as a locus of creative disruption, where the physical horizon meets spiritual ground. In this centennial catalogue, we unpack the thematic forces that have animated Taos’s artistic community, charting how artists have moved from literal representation to radical interior transcendence.',
     amazonLink: 'https://www.amazon.com/-/he/Nicole-Dial-Kay/dp/0890136769',
-    bamLink: 'https://www.booksamillion.com/p/Harwood-Centennial/Nicole-Dial-Kay/9780890136768'
+    link: 'https://harwoodmuseum.org/centennial/book/'
   },
   {
     id: 'debbie-long-essay',
@@ -138,7 +136,8 @@ export const writingsData: Writing[] = [
     publication: 'Harwood Museum of Art (Exhibition Brochure)',
     date: 'September 2021',
     type: 'Curatorial Essay',
-    excerpt: 'Debbie Long’s Light-House does not merely display light; it collects, distills, and transmits it, making the sky itself the active agent. Unlike the coastal, industrial Light and Space artists of California, Long’s sanctuary is earthy, hand-hewn, and deeply responsive to the organic atmospheric properties of Northern New Mexico.'
+    excerpt: 'Debbie Long’s Light-House does not merely display light; it collects, distills, and transmits it, making the sky itself the active agent. Unlike the coastal, industrial Light and Space artists of California, Long’s sanctuary is earthy, hand-hewn, and deeply responsive to the organic atmospheric properties of Northern New Mexico.',
+    link: 'https://harwoodmuseum.org/exhibition/debbie-long-light-ships/'
   },
   {
     id: 'gus-foster-panoramic',
@@ -146,7 +145,8 @@ export const writingsData: Writing[] = [
     publication: 'Harwood Museum of Art (Exhibition Catalog)',
     date: 'October 2022',
     type: 'Exhibition Catalog Essay',
-    excerpt: 'To stand in front of Gus Foster’s ten-foot panoramic prints is to experience a spatial displacement. Foster’s vintage Cirkut camera does not capture a split second; it captures time in rotation, mapping the landscape in a circular embrace that reveals the physical rigor of mountain summits and the silent majesty of southwestern plains.'
+    excerpt: 'To stand in front of Gus Foster’s ten-foot panoramic prints is to experience a spatial displacement. Foster’s vintage Cirkut camera does not capture a split second; it captures time in rotation, mapping the landscape in a circular embrace that reveals the physical rigor of mountain summits and the silent majesty of southwestern plains.',
+    link: 'https://harwoodmuseum.org/exhibition/gus-foster-panoramic-photographs-of-northern-new-mexico/'
   },
   {
     id: 'public-art-mountain',
@@ -154,79 +154,80 @@ export const writingsData: Writing[] = [
     publication: 'Colorado Creative Industries Annual Assembly',
     date: 'May 2019',
     type: 'Critical Essay & Case Study',
-    excerpt: 'Curating public contemporary art in mountain resort environments presents unique civic opportunities. By inserting temporary light-and-sound interventions into shared natural resources, we foster deep public dialogue on environment, accessibility, and community identity.'
+    excerpt: 'Curating public contemporary art in mountain resort environments presents unique civic opportunities. By inserting temporary light-and-sound interventions into shared natural resources, we foster deep public dialogue on environment, accessibility, and community identity.',
+    link: 'https://www.summitdaily.com/news/new-wave-festival-illuminates-breckenridge/'
   }
 ];
 
 export const pressData: Press[] = [
   {
     id: 'press-debbie-long',
-    title: 'Inside Debbie Long’s Light-House at Harwood Museum of Art',
-    source: 'Southwest Contemporary',
-    date: 'October 12, 2021',
-    quote: 'Inside Debbie Long\'s solar chamber, titled Light-House, daylight is concentrated and projected as intense color fields that travel slowly across the walls. The hand-crafted wooden vessel acts as an optical instrument, inviting deep somatic contemplation.',
+    title: 'Debbie Long Turns RVs Into Vessels of Light',
+    source: 'Hyperallergic',
+    date: 'March 2022',
+    quote: 'Like many of the most successful Light and Space pieces, "Willa" and her predecessor, a trailer called "Naima," rely on the simplest of gimmicks: light collection.',
     category: 'Review',
-    link: 'https://southwestcontemporary.com/debbie-long-light-house-at-the-harwood-museum-of-art/',
+    link: 'https://hyperallergic.com/debbie-long-turns-rvs-into-vessels-of-light/',
     fullText: [
-      'To enter Debbie Long’s solar chamber, titled Light-House, is to step outside of linear clock time and into the shifting atmospheric currents of the New Mexico high desert. Curated by Nicole Dial-Kay at the Harwood Museum of Art, the exhibition allows this site-specific structure to operate as both sculpture and precise optical instrument.',
-      'Unlike the industrial, polymer-heavy Light and Space movement of 1960s Southern California, Debbie Long’s practice is deeply grounded in the terrestrial materials of the Southwest. The handcrafted wooden cabin features custom-cast, hand-blown glass lenses and ports that capture, distill, and refract daylight across the interior space.',
-      'Through Nicole Dial-Kay\'s curation, the exhibition serves as a sanctuary for slow looking, prompting visitors to sit inside the vessel as colors stretch, bleed, and travel. It stands as a powerful investigate into somatic curation, transforming a museum gallery into an active, breathing cosmic clock that is highly responsive to the celestial rotation.'
+      'Over the past decade, the Taos-based Long has outfitted two vintage RVs with hundreds of cast glass pieces that collect light from the sky via a transparent ceiling. Inside the pristine white chamber of "Willa," stationed outside the Harwood Museum of Art, viewers lounge in cream-colored beanbag chairs for a one-hour immersive viewing experience.',
+      'An interior, site-specific museum installation is meant to re-create the night-sky experience of "Willa" and "Naima." A white cube built within a box with removable transparent panels collects light from the museum\'s windows, bouncing it down into the chamber.',
+      'Long is emphatic that Light Ships is not meant to be experienced in 10- or 15-minute glimpses, and the Harwood is offering periodic ticketed sunset viewing experiences of "Willa," led by the artist herself.'
     ]
   },
   {
     id: 'press-gus-foster',
-    title: 'Retrospective Captures Gus Foster’s Panoramic Rigor',
+    title: 'Fostering the land',
     source: 'The Taos News',
-    date: 'November 18, 2022',
-    quote: 'Nicole Dial-Kay\'s curation coordinates an expansive retrospective of Gus Foster’s fifty-year dedication to panoramic photography. The exhibition displays monumental prints up to ten feet long, arranging them to encircle the viewer in a powerful visual embrace.',
+    date: 'October 2021',
+    quote: 'No stranger to the Taos art scene, Foster is once again exhibiting his panoramic shots of Northern New Mexico at the Harwood Museum, where he has been involved on various levels for decades.',
     category: 'Review',
-    link: 'https://www.taosnews.com/la-vida/retro-gus-foster/article_3f58e4fa-4b82-11ed-b570-3351d5c21ec1.html',
+    link: 'https://www.taosnews.com/magazines/artes-tradiciones/fostering-the-land/article_456cf014-2554-11ec-817d-77e2c57a5f31.html',
     fullText: [
-      'In Gus Foster: Plaza, Peaks, and Plains, curator Nicole Dial-Kay presents a comprehensive look at Foster\'s panoramic captures of the American West. Hauling over eighty pounds of gear to Rocky Mountain summits, Foster operated a vintage 1940s Cirkut camera to capture continuous 360-degree exposures on long rolls of film.',
-      'The exhibition design establishes a strict linear rhythm that reflects the horizon itself. By mounting these monumental, ten-foot-long prints in custom frames, Dial-Kay surrounds the viewer with majestic alpine vistas and vast plains, evoking a powerful sense of scale and spatial geography.',
-      'By showcasing Foster\'s vintage cameras, maps, and archival field notes beside the finished prints, the curation successfully highlights the conceptual rigor, technical precision, and physical labor that underpins his historic landscape practice.'
+      'For Gus Foster and his camera, there are no limits. Since 1976, Foster has been taking awe-inspiring, panoramic photographs of Northern New Mexico along with areas in Utah, Arizona, California, and throughout the Southwestern United States.',
+      'According to the Harwood Museum release, "Gus Foster: Panoramic Photographs of Northern New Mexico includes works beginning from the artist\'s first years in Taos in the 1970s working with antique panoramic Cirkut cameras using black and white film, and moves through the 1980s-2000s when he began using cameras with new technology, color film, a unique enlarger for the large negatives, and a custom color darkroom of his own design and fabrication for 16-foot long photographic prints."',
+      'Though a somewhat reclusive artist, Foster is still very involved in the Taos community. Through his work with local artists and his efforts to expand the Harwood Museum, Foster has shown his love of this land both on the proverbial canvas and off.'
     ]
   },
   {
     id: 'press-centennial',
-    title: 'Harwood Museum Celebrates 100 Years: Opening the Vaults in Taos',
+    title: 'Harwood at a hundred',
     source: 'The Santa Fe New Mexican',
-    date: 'June 9, 2023',
-    quote: 'Out of the Box succeeds as a brilliant thematic re-contextualization of the Harwood Museum\'s permanent collection. Curated by Nicole Dial-Kay, the exhibition celebrates a century of artistic innovation in Taos, NM.',
+    date: 'June 2023',
+    quote: 'This year, the foundation is marking 100 years with an exhibition occupying all nine galleries in the museum, as well as a series of events through January 2024.',
     category: 'Feature',
-    link: 'https://harwoodmuseum.org/exhibitions/out-of-the-box-the-harwood-centennial-exhibition/',
+    link: 'https://www.santafenewmexican.com/pasatiempo/art/harwood-at-a-hundred/article_e056d296-bc59-11ed-896e-b70bcf920f38.html',
     fullText: [
-      'For its centennial year, the Harwood Museum of Art undertook its most ambitious project yet: unboxing a century of radical creative expression in Taos. Curator Nicole Dial-Kay bypassed a traditional chronological hang in favor of a thematic arrangement, dividing over 150 rare works into chapters like Spiritual Ground and Transcendent Spaces.',
-      'The result is a thrilling dialogue between generations. Centennial visitors see a sublime, light-bathed Agnes Martin grid hung in direct conversation with traditional 19th-century New Mexico bultos and retablos, revealing an enduring spiritual minimalism that spans centuries of Southwest art history.',
-      'By organizing the 4,700-object permanent collection around these deeper thematic resonances, Dial-Kay proves that Taos’s historic modernist avant-garde is a living influence that continues to shape contemporary regional practices in the High Desert.'
+      'Leherissey joined the museum in May 2019, followed by curator of exhibitions and collections Nicole Dial-Kay in 2020. That year, they began conducting research for the centennial celebration.',
+      'While Leherissey can\'t forecast how the Harwood will change in the next 100 years, she knows diversity will be a key focus in coming years. "We recognize our story comes from white-dominant narratives," she says.',
+      'The exhibition includes 200 works from the museum\'s collection, 200 rare books from the old library, and about a dozen pieces from other institutions. Among the most significant works in the latter group is The Lawrence Tree, an image of flora and the heavens that Georgia O\'Keeffe painted in 1929.'
     ]
   },
   {
     id: 'press-taos-news-100',
-    title: 'Unboxing Centennial Splendors in Taos',
+    title: 'Celebration this weekend in Taos honors 100 years of art and ideas at the Harwood Museum',
     source: 'The Taos News',
-    date: 'July 5, 2023',
-    quote: 'Unboxing these masterpieces reveals an ongoing dialogue across decades. The curation celebrates the museum\'s history while showing an unswerving commitment to pluralism, highlighting how contemporary Native and Hispanic artists are continually reinterpreting the Southwest landscape.',
+    date: 'June 2023',
+    quote: 'This is a great milestone for Harwood, which has been a cultural anchor in Taos.',
     category: 'Review',
-    link: 'https://harwoodmuseum.org/exhibitions/out-of-the-box-the-harwood-centennial-exhibition/',
+    link: 'https://www.taosnews.com/tempo/culture/celebration-this-weekend-in-taos-honors-100-years-of-art-and-ideas-at-the-harwood/article_8f89ac8e-2ac2-5b40-ba2e-a8459c656ecd.html',
     fullText: [
-      'The Harwood\'s centennial exhibition, Out of the Box, serves as a powerful reminder of Taos\'s status as a sanctuary for radical artistic experimentation. Nicole Dial-Kay\'s curatorial approach is refreshingly democratic, placing historical masterworks in tight, dialogic pairs with contemporary pieces.',
-      'A moody landscape by Victor Higgins gains new intensity when placed next to a bold, gestural abstraction by Beatrice Mandelman. The exhibition highlights the underlying geological and spiritual forces of Northern New Mexico that have bound these disparate movements together for over a century.',
-      'Dial-Kay\'s curation bridges the gap between the historical archive and the living community, proving that the local museum is a vital organ of contemporary dialogue.'
+      'The Harwood will begin its year-long centennial celebration with Block Party events Saturday (June 3) from 11 a.m. to 4 p.m. at the museum located at 238 Ledoux Street in Taos.',
+      'The museum has been built layer by layer, not only by Lucy Harwood\'s "indelible act of founding one of the first nonprofits in Taos in 1923, but also by the many people who dedicated their time, vision, resources and passion to creating its legacy," Leherissey says in the forward to "Harwood Centennial: 100 Works for 100 Years," a new commemorative book by Harwood Curator of Exhibitions and Collections Nicole Dial-Kay, and Curatorial Assistant Emily Santhanam.',
+      'Dial-Kay said she has been working on this exhibition since she first began working here three years ago.'
     ]
   },
   {
     id: 'press-centersantafe',
-    title: 'Dialogue on Curation and Collection Management in the High Desert',
-    source: 'Center Santa Fe Panel series',
-    date: 'April 22, 2024',
-    quote: 'Curator Nicole Dial-Kay shares insights into her practice of putting canonical mid-century modernists in dialogue with contemporary Native and Hispanic artists to build a more pluralistic museum model.',
+    title: 'Crafting the Centennial with Nicole Dial-Kay',
+    source: 'Harwood Museum of Art',
+    date: 'July 12, 2023',
+    quote: 'Join Harwood Curator of Collections and Exhibitions, Nicole Dial-Kay, for an in-depth look at the research and planning for the Harwood 100: Centennial Exhibition.',
     category: 'Interview',
-    link: 'https://harwoodmuseum.org/',
+    link: 'https://harwoodmuseum.org/events/crafting-the-centennial-with-nicole-dial-kay/',
     fullText: [
-      'In this engaging interview from the Center Santa Fe Panel series, curator Nicole Dial-Kay discusses the unique logistical and philosophical challenges of managing a historic art collection in the high desert. Dial-Kay emphasizes that a collection of 4,700 objects must never be treated as static inventory.',
-      'By placing canonical mid-century Modernists (such as Emil Bisttram and Clay Spohn) in active conversation with contemporary Native and Hispanic artists, Dial-Kay is actively decolonizing the traditional, Eurocentric museum narrative. She discusses the importance of community partnerships, the spiritual weight of Northern New Mexico’s devotional arts, and the role of the modern curator as a facilitator of cultural dialogues rather than a gatekeeper of history.',
-      'Throughout the dialogue, Dial-Kay outlines how the rugged environment of Taos shapes the artistic output and the curatorial imperative of the high desert. The conversation highlights the transition toward more pluralistic, representative museum practices that connect deeply with regional soil.'
+      'For this comprehensive project, Nicole dug deep into the Harwood archives and records finding hidden gems and new insights into the Harwood\'s 100 years as a cultural institution.',
+      'She will share her process for curating the exhibition and a few of lesser-known facets of Harwood and Taos history that didn\'t make it into the exhibition.',
+      'A catalogue signing will follow the conversation.'
     ]
   }
 ];
@@ -256,7 +257,7 @@ export const experienceData: Experience[] = [
     logoText: 'B',
     bullets: [
       'Directed all artistic and programmatic divisions of Breckenridge Creative Arts, overseeing the curation of public art, gallery exhibitions, workshops, and multi-disciplinary performances.',
-      'Managed a $1.2M annual programming budget and supervised a full-time and contract staff of creative professionals.',
+      'Managed the annual programming budget and supervised full-time and contract creative staff.',
       'Developed long-term strategic plans for civic arts engagement and public art curation across the Breckenridge cultural district.'
     ]
   },
@@ -281,7 +282,7 @@ export const experienceData: Experience[] = [
     location: 'Boulder, Colorado',
     logoText: 'BM',
     bullets: [
-      'Designed, implemented, and evaluated educational and public programs, reaching over 20,000 community members annually.',
+      'Designed, implemented, and evaluated educational and public programs for the museum and broader community.',
       'Curated educational galleries and designed interactive children\'s and adult exhibition programming inside the museum.',
       'Forged strong partnerships with public schools, universities, and community organizations to expand access to contemporary art education.',
       'Secured local, state, and federal grant funding to support educational and outreach initiatives.'
@@ -326,7 +327,7 @@ export const educationData: Education[] = [
     institution: 'University of Arizona',
     year: '2011',
     location: 'Tucson, Arizona',
-    details: 'Graduated Magna Cum Lude. Focus on Southwest history, critical theory, and 20th-century literature.'
+    details: 'Graduated Magna Cum Laude. Focus on Southwest history, critical theory, and 20th-century literature.'
   }
 ];
 export const contactDetails = {
@@ -349,7 +350,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Explores Beatrice Mandelman’s use of organic and structural form.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/make-your-mark-student-responses-to-modernist-abstraction/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2025/04/Make-Your-Mark-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/make-your-mark.jpg'
   },
   {
     id: 'same-place-time',
@@ -363,7 +364,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Prompts deep somatic awareness of local ecological timelines and celestial rotation.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/the-same-place-at-the-same-time/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2025/04/Same-Place-Time-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/PuebloFoodwaysPosterFeatured.jpg'
   },
   {
     id: 'pursuit-of-happiness',
@@ -377,7 +378,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Exhibits historic documents, university registration logs, and archival correspondence.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/gi-bill-in-taos/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2025/06/GI-Bill-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/gi-featured.jpg'
   },
   {
     id: 'legacy-in-line',
@@ -391,7 +392,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Highlights her collaborations with Taos Pueblo and local Hispanic communities.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/legacy-in-line-the-art-of-gene-kloss/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2024/11/Kloss-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/legacy-in-line-featured.jpg'
   },
   {
     id: 'charles-ross-zodiac',
@@ -405,7 +406,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Establishes conceptual links to Ross\'s local monumental earthwork, Star Axis.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/charles-ross-mansions-of-the-zodiac/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2024/11/Ross_MansionsoftheZodiac_exhibition.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/charles-ross-featured.jpg'
   },
   {
     id: 'unearthing-futures',
@@ -421,7 +422,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
     link: 'https://harwoodmuseum.org/exhibition/futuros/',
     reviewUrl: 'https://southwestcontemporary.com/unearthing-futures-desenterrando-futuros/',
     reviewLabel: 'Southwest Contemporary Feature Review',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2024/04/unearthing-futures-web.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/exhibit-thumbnail.jpg'
   },
   {
     id: 'raven-chacon-three-songs',
@@ -435,9 +436,9 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Coordinated live, site-specific musical performances inside the Harwood galleries in collaboration with local artists.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/raven-chacon/',
-    reviewUrl: 'https://southwestcontemporary.com/raven-chacon-three-songs-harwood-museum-of-art/',
+    reviewUrl: 'https://southwestcontemporary.com/raven-chacon-three-songs-at-the-harwood/',
     reviewLabel: 'Southwest Contemporary Critical Review',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2023/11/Raven_Chacon-Three_Songs_Web.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/chacon-featured.jpg'
   },
   {
     id: 'unknown-santeros',
@@ -450,10 +451,10 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Highlights key anonymous masters, including the Laguna Santero, Molleno, and the A.J. Santero.',
       'Explores the chemical and organic science of wood analysis, local plant-varnishes, and mineral pigments.'
     ],
-    link: 'https://harwoodmuseum.org/exhibition/unknown-santeros-of-northern-new-mexico/',
+    link: 'https://harwoodmuseum.org/art/collections/hispanic-traditions/',
     reviewUrl: 'https://southwestcontemporary.com/harwood-museum-unknown-santeros/',
     reviewLabel: 'Southwest Contemporary Exhibition Review',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2023/11/Out_of_the_Box_Spiritual-Ground-1.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/Harwood-Museum-Taos-Krissa-Maria-Lopez-Nuestra-Senora.jpeg'
   },
   {
     id: 'nicholas-herrera',
@@ -467,7 +468,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Juxtaposes traditional natural pigments with industrial spray paints.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/nicholas-herrera/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2024/05/Herrera_ElRitoSantero_exhibition.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/nicholas-herrera-featured-1.jpg'
   },
   {
     id: 'luchita-hurtado',
@@ -481,7 +482,9 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Focuses on her legacy of environmental activism in the Southwest.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/luchita-hurtado/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2024/04/LuchitaHurtado_EarthSkyInterjected.jpg'
+    reviewUrl: 'https://southwestcontemporary.com/luchita-hurtado-earth-sky-interjected-at-the-harwood-museum-of-art/',
+    reviewLabel: 'Southwest Contemporary Exhibition Review',
+    image: 'https://harwoodmuseum.org/wp-content/uploads/luchita-featured.jpg'
   },
   {
     id: 'remote-possibilities',
@@ -495,7 +498,9 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Exhibits seminal computational art from pioneers like John Gerrard and Marina Zurkow.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/remote-possibilities/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2021/04/Remote-Possibilities-featured.jpg'
+    reviewUrl: 'https://southwestcontemporary.com/remote-possibilities-at-the-harwood-museum-of-art/',
+    reviewLabel: 'Southwest Contemporary Exhibition Review',
+    image: 'https://harwoodmuseum.org/wp-content/uploads/sarah-steinkamp-featured.jpg'
   },
   {
     id: 'harwood-centennial-exhib',
@@ -509,7 +514,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Includes community memory booths and historical video oral histories.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/centennial/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2023/04/Out_of_the_Box_featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/harwood-featured-final.png'
   },
   {
     id: 'buck-dunton',
@@ -523,7 +528,9 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Explores his deep concerns regarding the rapid industrialization and loss of Western wilderness.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/william-herbert-buck-dunton-from-maine-to-new-mexico/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2022/08/MainerGoesWest-Web-Banner-copy.jpg'
+    reviewUrl: 'https://southwestcontemporary.com/challenging-cowboy-history-at-the-harwood-museum-of-art/',
+    reviewLabel: 'Southwest Contemporary Exhibition Review',
+    image: 'https://harwoodmuseum.org/wp-content/uploads/dunton-featured.jpg'
   },
   {
     id: 'outriders-black-cowboy',
@@ -537,7 +544,9 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Highlights the intersection of Western cowboy culture with contemporary Black identity.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/outriders-legacy-of-the-black-cowboy/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2022/08/Outriders-web-banner-copy.jpg'
+    reviewUrl: 'https://southwestcontemporary.com/challenging-cowboy-history-at-the-harwood-museum-of-art/',
+    reviewLabel: 'Southwest Contemporary Exhibition Review',
+    image: 'https://harwoodmuseum.org/wp-content/uploads/outriders-featured.jpg'
   },
   {
     id: 'new-beginnings-romantics',
@@ -551,7 +560,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Exhibits works by Mabel Dodge Luhan\'s circle, including Andrew Dasburg and Victor Higgins.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/new-beginnings/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2023/11/harwood-museum-colonial-collection.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/Hogue-Across-the-Valley-700-wide.jpg'
   },
   {
     id: 'debbie-long-rv',
@@ -565,7 +574,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Accompanied by ambient outdoor sound installations responsive to desert winds.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/debbie-long-light-ships/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2021/04/Long-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/LEAD1.D-Willa-in-Landscape-700-pxls-wide.jpg'
   },
   {
     id: 'gus-foster-panorama-nm',
@@ -579,7 +588,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Explores environmental preservation efforts in regional high desert zones.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/gus-foster-panoramic-photographs-of-northern-new-mexico/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2021/01/Foster-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/gus-foster-featured-image.jpg'
   },
   {
     id: 'blue-lake-anniversary',
@@ -593,7 +602,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Developed in deep collaboration with the Taos Pueblo War Chief’s Office and tribal historians.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/blue-lake/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2021/04/Blue-Lake-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/Taos_Pueblo-700x420-1.jpg'
   },
   {
     id: 'santo-lowride',
@@ -607,7 +616,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Features a beautiful catalog detailing the cultural pride of Norteño lowrider clubs.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/santo-lowride-norteno-car-culture-and-the-santos-tradition/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2021/04/Santo-Lowride-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/Harwood-Museum-Taos-Vanderslice.jpeg'
   },
   {
     id: 'sliver-of-sun',
@@ -621,7 +630,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Accompanied by a poetic catalog essay examining the psychological weight of color fields.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/in-the-sliver-of-the-sun-maja-ruznic/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2021/01/Ruznic-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/maja-ruznic-featured.jpg'
   },
   {
     id: 'contemporary-taos-2020',
@@ -635,7 +644,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Exhibits works responding directly to the social challenges of the year 2020.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/contemporary-art-taos-2020/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2020/06/Contemporary-Art-Taos-2020-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/Harwood-Museum-Taos-Anita-Rodriguez-580x420-1.jpeg'
   },
   {
     id: 'las-santeras',
@@ -649,7 +658,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Displays detailed guides on native plant-based varnishes and hand-ground mineral pigments.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/las-santeras-images-of-faith-and-folklore/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2020/06/Las-Santeras-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/Harwood-Museum-Taos-Krissa-Maria-Lopez-Nuestra-Senora.jpeg'
   },
   {
     id: 'dean-pulver',
@@ -663,7 +672,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Highlights themes of spiritual connection, raw materials, and environmental geometry.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/dean-pulver-elemental-resonance/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/2019/11/Pulver-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/dean-pulver-featured-image-860x575-1.jpeg'
   }
 ];
 
