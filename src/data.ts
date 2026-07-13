@@ -7,11 +7,13 @@ export const IMAGES = {
   gusFoster: 'https://harwoodmuseum.org/wp-content/uploads/gus-foster-featured-image.jpg',
 };
 
-export const bioSummary = `Nicole Dial-Kay is an art curator, museum professional, and writer based in Taos, New Mexico. She currently serves as the Curator of Exhibitions and Collections at the Harwood Museum of Art of the University of New Mexico, where she oversees a collection of over 4,700 works spanning historic Hispanic devotional art, the Taos Society of Artists, Taos Moderns, and contemporary regional expressions. 
+export const bioSummary = `Nicole Dial-Kay is a Taos, New Mexico-based curator and writer focusing on exhibitions that reflect the diverse cultural histories and contemporary talent of Northern New Mexico. For over fifteen years, Dial-Kay has been devoted to organizing ambitious, multi-gallery exhibitions, public arts programming, and site-specific installations. She is currently the Curator of Exhibitions and Collections at the Harwood Museum of Art, where she considers herself primarily a facilitator, bridging historic legacies—such as the Taos Society of Artists and mid-century Taos Moderns—with contemporary Native and Hispanic expressions.
 
-With over 15 years of experience in non-profit art spaces, public galleries, and museums, Dial-Kay's practice centers on creating dialogic relationships between historic, modern, and contemporary art, challenging traditional linear narratives and highlighting regional avant-gardes. Her curatorial projects and critical essays often explore light-and-space somatic installations, panoramic landscape traditions, and Northern New Mexico's enduring legacy as a crucible for radical artistic experimentation.
+Previous roles include Senior Director of Arts + Programming at Breckenridge Creative Arts, Director of Education at the Boulder Museum of Contemporary Art, and curatorial positions at the CU Art Museum, Pratt Museum in Homer, Alaska, and the Saint Louis Art Museum. She gained broad acclaim for organizing the pathbreaking 2023 exhibition Out of the Box: The Harwood Centennial Exhibition, charting 100 years of artistic innovation in Taos. Dial-Kay has also organized major site-specific and solo projects for artists including Raven Chacon, Debbie Long, and Gus Foster, as well as directing the large-scale WAVE festival in Colorado.
 
-Prior to joining the Harwood, Dial-Kay was the Senior Director of Arts + Programming at Breckenridge Creative Arts (CO), where she directed the annual WAVE: Light + Water + Sound festival and led major exhibitions of public contemporary art. She has also served as the Director of Education at the Boulder Museum of Contemporary Art (BMoCA) and held roles at the CU Art Museum and the University of Colorado Visual Resource Center. She holds a Master of Arts in Art History from the University of Colorado Boulder.`;
+Her writing has been featured in comprehensive exhibition catalogues published by the Museum of New Mexico Press and the Harwood Museum of Art, alongside independent curatorial essays on regional practices, environmental art, and public installations. She has been a guest speaker and presented critical case studies on public art as a civic engine at platforms such as the Colorado Creative Industries Annual Assembly.
+
+She received Master of Arts degrees in Art History from the University of Colorado Boulder and in Museum Studies from the University of Missouri, and holds a Bachelor of Arts in Art History from Southern Illinois University.`;
 
 export const exhibitionsData: Exhibition[] = [
   {
@@ -236,43 +238,23 @@ export const experienceData: Experience[] = [
   {
     id: 'exp-harwood',
     role: 'Curator of Exhibitions and Collections',
-    institution: 'Harwood Museum of Art of the University of New Mexico',
+    institution: 'Harwood Museum of Art',
     duration: 'Feb 2020 – Present',
     location: 'Taos, New Mexico',
-    logoText: 'H',
-    bullets: [
-      'Oversee the curation, exhibition calendar, and management of the museum\'s 4,700-object permanent collection, spanning historic Southwest art to contemporary abstraction.',
-      'Lead a multi-disciplinary curatorial department, designing and producing 4–6 major temporary exhibitions and permanent collection rotations annually.',
-      'Curate major historic and contemporary projects, including the centerpiece Harwood Centennial Exhibition (Out of the Box) and solo installations for Debbie Long, Gus Foster, and Dean Porter.',
-      'Co-author academic catalogues and curatorial essays, collaborating with publishers like the Museum of New Mexico Press.',
-      'Spearhead the development and maintenance of donor and collector relations to expand collection holdings and secure exhibition funding.'
-    ]
   },
   {
     id: 'exp-breck-creative-senior',
     role: 'Senior Director of Arts + Programming',
-    institution: 'Breckenridge Creative Arts (BCA)',
+    institution: 'Breckenridge Creative Arts',
     duration: 'Oct 2019 – Feb 2020',
-    location: 'Breckenridge, Colorado',
-    logoText: 'B',
-    bullets: [
-      'Directed all artistic and programmatic divisions of Breckenridge Creative Arts, overseeing the curation of public art, gallery exhibitions, workshops, and multi-disciplinary performances.',
-      'Managed the annual programming budget and supervised full-time and contract creative staff.',
-      'Developed long-term strategic plans for civic arts engagement and public art curation across the Breckenridge cultural district.'
-    ]
+    location: 'Breckenridge, CO',
   },
   {
     id: 'exp-breck-creative-director',
     role: 'Director of Exhibitions + Special Projects',
-    institution: 'Breckenridge Creative Arts (BCA)',
-    duration: 'Sep 2017 – Oct 2019',
-    location: 'Breckenridge, Colorado',
-    logoText: 'B',
-    bullets: [
-      'Curated and managed contemporary art exhibitions across the BCA gallery network and public spaces.',
-      'Co-curated and programmatically directed the annual WAVE: Light + Water + Sound festival, commissioning major site-specific installations by national and international digital artists.',
-      'Coordinated complex installation logistics, municipal permitting, and safety audits for large-scale outdoor public sculptures and interactive installations.'
-    ]
+    institution: 'Breckenridge Creative Arts',
+    duration: 'Sep 2017 – Feb 2020',
+    location: 'Breckenridge, CO',
   },
   {
     id: 'exp-bmoca',
@@ -280,13 +262,6 @@ export const experienceData: Experience[] = [
     institution: 'Boulder Museum of Contemporary Art (BMoCA)',
     duration: 'Jan 2014 – Jul 2017',
     location: 'Boulder, Colorado',
-    logoText: 'BM',
-    bullets: [
-      'Designed, implemented, and evaluated educational and public programs for the museum and broader community.',
-      'Curated educational galleries and designed interactive children\'s and adult exhibition programming inside the museum.',
-      'Forged strong partnerships with public schools, universities, and community organizations to expand access to contemporary art education.',
-      'Secured local, state, and federal grant funding to support educational and outreach initiatives.'
-    ]
   },
   {
     id: 'exp-cu-art',
@@ -294,11 +269,6 @@ export const experienceData: Experience[] = [
     institution: 'CU Art Museum',
     duration: 'Apr 2013 – Jan 2014',
     location: 'Boulder, Colorado',
-    logoText: 'CU',
-    bullets: [
-      'Assisted curatorial staff in research, cataloguing, and installation of temporary exhibitions and collection rotations.',
-      'Drafted wall texts, gallery guides, and archival catalog entries for the museum\'s permanent collection.'
-    ]
   },
   {
     id: 'exp-cu-vrc',
@@ -306,28 +276,90 @@ export const experienceData: Experience[] = [
     institution: 'University of Colorado Visual Resource Center',
     duration: 'Aug 2011 – Apr 2013',
     location: 'Boulder, Colorado',
-    logoText: 'CU',
-    bullets: [
-      'Digitized and catalogued historic and contemporary slide collections, utilizing Dublin Core and cataloguing standards.',
-      'Provided art historical research support to university faculty and students.'
-    ]
-  }
+  },
+  {
+    id: 'exp-denver-art',
+    role: 'Research Assistant',
+    institution: 'Denver Art Museum',
+    duration: 'May 2012 – Feb 2013',
+    location: 'Denver Metropolitan Area',
+  },
+  {
+    id: 'exp-cu-ta',
+    role: 'Teaching Assistant',
+    institution: 'University of Colorado Boulder',
+    duration: 'Jan 2012 – Dec 2012',
+    location: 'Boulder, Colorado',
+  },
+  {
+    id: 'exp-laumeier',
+    role: 'Curatorial Assistant',
+    institution: 'Laumeier Sculpture Park',
+    duration: 'Jan 2011 – May 2011',
+    location: 'Saint Louis, Missouri',
+  },
+  {
+    id: 'exp-slam',
+    role: 'Assistant to Public Programs, Interpretation, Education, Membership, and Docent Departments',
+    institution: 'Saint Louis Art Museum',
+    duration: 'Aug 2009 – May 2011',
+    location: 'Saint Louis, Missouri',
+  },
+  {
+    id: 'exp-pratt',
+    role: 'Curatorial and Collections Assistant',
+    institution: 'Pratt Museum',
+    duration: 'May 2010 – Aug 2010',
+    location: 'Homer, Alaska',
+  },
+  {
+    id: 'exp-mercantile',
+    role: 'Curatorial Assistant',
+    institution: 'Mercantile Library',
+    duration: 'Jan 2010 – May 2010',
+    location: 'Saint Louis, Missouri',
+  },
+  {
+    id: 'exp-catholique',
+    role: 'English teacher',
+    institution: "Catholique de l'Ouest",
+    duration: 'May 2009 – Aug 2009',
+    location: 'Greater Angers Area',
+  },
+  {
+    id: 'exp-glen-carbon',
+    role: 'French teacher',
+    institution: 'Glen Carbon Elementary School',
+    duration: 'Aug 2008 – Apr 2009',
+    location: 'Glen Carbon, Illinois',
+  },
+  {
+    id: 'exp-cam-stl',
+    role: 'Research Assistant',
+    institution: 'Contemporary Art Museum St. Louis',
+    duration: 'May 2008 – Aug 2008',
+    location: 'Saint Louis, Missouri',
+  },
 ];
 
 export const educationData: Education[] = [
   {
     degree: 'Master of Arts in Art History',
-    institution: 'University of Colorado Boulder',
-    year: '2013',
-    location: 'Boulder, Colorado',
-    details: 'Specialization in Modern and Contemporary Art. Graduate Assistant at the Visual Resource Center.'
+    institution: 'University of Colorado',
+    year: '',
+    location: 'Colorado',
   },
   {
-    degree: 'Bachelor of Arts in Art History & English',
-    institution: 'University of Arizona',
-    year: '2011',
-    location: 'Tucson, Arizona',
-    details: 'Graduated Magna Cum Laude. Focus on Southwest history, critical theory, and 20th-century literature.'
+    degree: 'Master of Arts in Museum Studies',
+    institution: 'University of Missouri',
+    year: '',
+    location: 'Missouri',
+  },
+  {
+    degree: 'Bachelor of Arts in Art History',
+    institution: 'Southern Illinois University',
+    year: '',
+    location: 'Illinois',
   }
 ];
 export const contactDetails = {

@@ -144,25 +144,30 @@ export default function Curatorial() {
             <div className="thumb-nav">
               <button
                 type="button"
+                className="thumb-nav-prev"
                 onClick={() => scrollByPage(-1)}
                 disabled={!canPrev}
                 aria-label="Previous exhibitions"
               >
-                ← Prev
+                <span className="thumb-nav-label-full">← Prev</span>
+                <span className="thumb-nav-label-short">←</span>
               </button>
               <span className="thumb-nav-count">
                 {activeIndex + 1} / {thumbs.length}
               </span>
               <button
                 type="button"
+                className="thumb-nav-next"
                 onClick={() => scrollByPage(1)}
                 disabled={!canNext}
                 aria-label="Next exhibitions"
               >
-                Next →
+                <span className="thumb-nav-label-full">Next →</span>
+                <span className="thumb-nav-label-short">→</span>
               </button>
               <button
                 type="button"
+                className="thumb-nav-start"
                 onClick={() => scrollToIndex(0)}
                 disabled={!canPrev}
                 aria-label="Jump to start"

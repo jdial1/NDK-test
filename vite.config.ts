@@ -4,7 +4,7 @@ import path from 'path';
 import {defineConfig} from 'vite';
 
 export default defineConfig(({command}) => ({
-  base: command === 'serve' ? '/' : './',
+  base: command === 'serve' ? '/' : '/NDK-test/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
