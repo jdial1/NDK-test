@@ -73,6 +73,7 @@ function blankPress(): Press {
     quote: '',
     category: 'Feature',
     link: '',
+    exhibitionId: '',
   };
 }
 

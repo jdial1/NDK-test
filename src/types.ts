@@ -38,6 +38,7 @@ export interface Press {
   link?: string;
   category: 'Review' | 'Interview' | 'Feature';
   fullText?: string[];
+  exhibitionId?: string;
 }
 
 export interface Experience {
