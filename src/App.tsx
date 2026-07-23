@@ -1,13 +1,18 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import Header from './components/Header';
 import Curatorial from './components/Curatorial';
 import Writing from './components/Writing';
 import Press from './components/Press';
 import Biography from './components/Biography';
+import EditModal from './components/EditModal';
+import { ActiveSection, SiteDataProvider, useSiteData } from './context/SiteDataContext';
 
-export default function App() {
-  const [activeSection, setActiveSection] = React.useState<string>('about');
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || undefined;
+
+function SiteShell() {
+  const { activeSection, setActiveSection } = useSiteData();
 
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
@@ -15,7 +20,10 @@ export default function App() {
 
   return (
     <div className="site-shell">
-      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Header
+        activeSection={activeSection}
+        setActiveSection={(section) => setActiveSection(section as ActiveSection)}
+      />
 
       <main>
         <AnimatePresence mode="wait">
@@ -65,6 +73,23 @@ export default function App() {
           )}
         </AnimatePresence>
       </main>
+
+      <EditModal />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter basename={basename}>
+      <SiteDataProvider>
+        <Routes>
+          <Route path="/" element={<SiteShell />} />
+          <Route path="/template" element={<SiteShell />} />
+          <Route path="/edit" element={<SiteShell />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </SiteDataProvider>
+    </BrowserRouter>
   );
 }

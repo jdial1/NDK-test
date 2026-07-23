@@ -72,3 +72,31 @@ export interface PastHarwoodExhibition {
   image?: string;
 }
 
+export interface ContactDetails {
+  email: string;
+  linkedin: string;
+  harwoodEmail: string;
+  harwoodUrl: string;
+}
+
+export interface SiteImages {
+  portrait: string;
+  outOfTheBox: string;
+  debbieLong: string;
+  gusFoster: string;
+}
+
+export interface SiteData {
+  IMAGES: SiteImages;
+  bioSummary: string;
+  exhibitionsData: Exhibition[];
+  writingsData: Writing[];
+  pressData: Press[];
+  experienceData: Experience[];
+  educationData: Education[];
+  contactDetails: ContactDetails;
+  pastExhibitionsData: PastHarwoodExhibition[];
+}
+
+export type ViewMode = 'live' | 'template' | 'edit';
+

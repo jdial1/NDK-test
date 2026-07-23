@@ -1,4 +1,4 @@
-import { Exhibition, Writing, Press, Experience, Education, PastHarwoodExhibition } from './types';
+import { Exhibition, Writing, Press, Experience, Education, PastHarwoodExhibition, SiteData } from './types';
 
 export const IMAGES = {
   portrait: 'https://harwoodmuseum.org/wp-content/uploads/Nicole.jpg',
@@ -707,4 +707,16 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
     image: 'https://harwoodmuseum.org/wp-content/uploads/dean-pulver-featured-image-860x575-1.jpeg'
   }
 ];
+
+export const siteData: SiteData = {
+  IMAGES,
+  bioSummary,
+  exhibitionsData,
+  writingsData,
+  pressData,
+  experienceData,
+  educationData,
+  contactDetails,
+  pastExhibitionsData,
+};
 

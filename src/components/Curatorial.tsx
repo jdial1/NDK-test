@@ -1,45 +1,44 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { exhibitionsData, pastExhibitionsData } from '../data';
 import { Exhibition, PastHarwoodExhibition } from '../types';
+import { useSiteData } from '../context/SiteDataContext';
+import TemplateField from './TemplateField';
 
-type Selected = Exhibition | PastHarwoodExhibition;
+type Selected = (Exhibition | PastHarwoodExhibition) & { pathBase: string };
 
 export default function Curatorial() {
+  const { data, mode } = useSiteData();
+  const editing = mode === 'edit';
   const [selected, setSelected] = React.useState<Selected | null>(null);
   const [canPrev, setCanPrev] = React.useState(false);
   const [canNext, setCanNext] = React.useState(false);
   const [activeIndex, setActiveIndex] = React.useState(0);
   const railRef = React.useRef<HTMLDivElement>(null);
 
-  const thumbs: {
-    id: string;
-    title: string;
-    date: string;
-    theme: string;
-    blurb: string;
-    image: string;
-    item: Selected;
-  }[] = [
-    ...exhibitionsData.map((ex) => ({
+  const thumbs = [
+    ...data.exhibitionsData.map((ex, i) => ({
       id: ex.id,
-      title: ex.title,
-      date: ex.date,
-      theme: ex.category,
-      blurb: ex.description,
-      image: ex.image,
-      item: ex as Selected,
+      titlePath: `exhibitionsData.${i}.title`,
+      datePath: `exhibitionsData.${i}.date`,
+      themePath: `exhibitionsData.${i}.category`,
+      blurbPath: `exhibitionsData.${i}.description`,
+      imagePath: `exhibitionsData.${i}.image`,
+      pathBase: `exhibitionsData.${i}`,
+      item: { ...ex, pathBase: `exhibitionsData.${i}` } as Selected,
     })),
-    ...pastExhibitionsData
-      .filter((ex) => ex.image)
-      .map((ex) => ({
+    ...data.pastExhibitionsData
+      .map((ex, i) => ({ ex, i }))
+      .filter(({ ex }) => ex.image)
+      .map(({ ex, i }) => ({
         id: ex.id,
-        title: ex.title,
-        date: ex.date,
-        theme: 'Harwood',
-        blurb: ex.description,
-        image: ex.image as string,
-        item: ex as Selected,
+        titlePath: `pastExhibitionsData.${i}.title`,
+        datePath: `pastExhibitionsData.${i}.date`,
+        themePath: '',
+        blurbPath: `pastExhibitionsData.${i}.description`,
+        imagePath: `pastExhibitionsData.${i}.image`,
+        pathBase: `pastExhibitionsData.${i}`,
+        item: { ...ex, pathBase: `pastExhibitionsData.${i}` } as Selected,
+        themeLabel: 'Harwood',
       })),
   ];
 
@@ -126,16 +125,28 @@ export default function Curatorial() {
                   type="button"
                   className="thumb-item"
                   onClick={() => setSelected(thumb.item)}
-                  aria-label={thumb.title}
+                  aria-label={thumb.id}
                 >
                   <span className="thumb-item-image">
-                    <img src={thumb.image} alt={thumb.title} referrerPolicy="no-referrer" />
+                    <TemplateField path={thumb.imagePath} as="img" alt="" />
                   </span>
                   <span className="thumb-caption">
-                    <span className="thumb-theme">{thumb.theme}</span>
-                    <span className="thumb-title">{thumb.title}</span>
-                    <span className="thumb-date">{thumb.date}</span>
-                    <span className="thumb-blurb">{thumb.blurb}</span>
+                    <span className="thumb-theme">
+                      {thumb.themePath ? (
+                        <TemplateField path={thumb.themePath} />
+                      ) : (
+                        'themeLabel' in thumb ? thumb.themeLabel : 'Harwood'
+                      )}
+                    </span>
+                    <span className="thumb-title">
+                      <TemplateField path={thumb.titlePath} />
+                    </span>
+                    <span className="thumb-date">
+                      <TemplateField path={thumb.datePath} />
+                    </span>
+                    <span className="thumb-blurb">
+                      <TemplateField path={thumb.blurbPath} />
+                    </span>
                   </span>
                 </button>
               ))}
@@ -193,45 +204,92 @@ export default function Curatorial() {
               >
                 ← Selected Exhibitions
               </button>
-              <h2 className="project-title">{selected.title}</h2>
+              <h2 className="project-title">
+                <TemplateField path={`${selected.pathBase}.title`} />
+              </h2>
               <p className="mb-[21px]">
-                {'date' in selected ? selected.date : ''}
-                {'location' in selected && selected.location ? ` · ${selected.location}` : ''}
+                <TemplateField path={`${selected.pathBase}.date`} />
+                {'location' in selected && selected.location ? (
+                  <>
+                    {' · '}
+                    <TemplateField path={`${selected.pathBase}.location`} />
+                  </>
+                ) : null}
               </p>
-              <p className="mb-[21px]">{selected.description}</p>
-              {'details' in selected && selected.details?.map((detail, idx) => (
-                <p key={idx} className="mb-[14px] text-[#666]">
-                  {detail}
-                </p>
-              ))}
-              {'curatorialDetails' in selected &&
-                selected.curatorialDetails?.map((detail, idx) => (
+              <p className="mb-[21px]">
+                <TemplateField path={`${selected.pathBase}.description`} />
+              </p>
+              {'details' in selected &&
+                selected.details?.map((_, idx) => (
                   <p key={idx} className="mb-[14px] text-[#666]">
-                    {detail}
+                    <TemplateField path={`${selected.pathBase}.details.${idx}`} />
+                  </p>
+                ))}
+              {'curatorialDetails' in selected &&
+                selected.curatorialDetails?.map((_, idx) => (
+                  <p key={idx} className="mb-[14px] text-[#666]">
+                    <TemplateField path={`${selected.pathBase}.curatorialDetails.${idx}`} />
                   </p>
                 ))}
               <p className="mt-[21px]">
                 {selected.link && (
-                  <a href={selected.link} target="_blank" rel="noopener noreferrer">
-                    Exhibition page
-                  </a>
+                  mode === 'template' ? (
+                    <TemplateField path={`${selected.pathBase}.link`} />
+                  ) : (
+                    <a
+                      href={selected.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={editing ? (e) => {
+                        e.preventDefault();
+                      } : undefined}
+                    >
+                      <TemplateField path={`${selected.pathBase}.link`} display="Exhibition page" />
+                    </a>
+                  )
                 )}
                 {'reviewUrl' in selected && selected.reviewUrl && (
                   <>
                     {selected.link ? ' · ' : ''}
-                    <a href={selected.reviewUrl} target="_blank" rel="noopener noreferrer">
-                      {selected.reviewLabel || 'Review'}
-                    </a>
+                    {mode === 'template' ? (
+                      <>
+                        <TemplateField path={`${selected.pathBase}.reviewUrl`} />
+                        {' · '}
+                        <TemplateField path={`${selected.pathBase}.reviewLabel`} />
+                      </>
+                    ) : (
+                      <a
+                        href={selected.reviewUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={editing ? (e) => e.preventDefault() : undefined}
+                      >
+                        <TemplateField
+                          path={`${selected.pathBase}.reviewLabel`}
+                          display={
+                            'reviewLabel' in selected && selected.reviewLabel
+                              ? selected.reviewLabel
+                              : 'Review'
+                          }
+                        />
+                      </a>
+                    )}
+                  </>
+                )}
+                {editing && 'reviewUrl' in selected && selected.reviewUrl && (
+                  <>
+                    {' · '}
+                    <TemplateField path={`${selected.pathBase}.reviewUrl`} display="edit review URL" />
                   </>
                 )}
               </p>
             </div>
             {'image' in selected && selected.image && (
               <div className="detail-media">
-                <img
-                  src={selected.image}
+                <TemplateField
+                  path={`${selected.pathBase}.image`}
+                  as="img"
                   alt={selected.title}
-                  referrerPolicy="no-referrer"
                 />
               </div>
             )}
