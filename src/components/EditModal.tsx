@@ -81,13 +81,15 @@ const WRITING_FIELDS: FieldDef[] = [
   { key: 'date', label: 'Date', hint: 'e.g. June 2023' },
   { key: 'type', label: 'Type', hint: 'Essay, catalogue, case study…' },
   { key: 'excerpt', label: 'Excerpt', hint: 'Short description', rows: 4 },
+  { key: 'image', label: 'Image', hint: 'Cover or thumbnail URL' },
   { key: 'link', label: 'Link', hint: 'Primary URL' },
   { key: 'amazonLink', label: 'Amazon link', hint: 'Optional' },
   { key: 'bamLink', label: 'BAM link', hint: 'Optional' },
 ];
 
 const PRESS_FIELDS: FieldDef[] = [
-  { key: 'title', label: 'Title', hint: 'Main list text', rows: 2 },
+  { key: 'author', label: 'Author', hint: 'Optional byline' },
+  { key: 'title', label: 'Title', hint: 'Article title', rows: 2 },
   { key: 'source', label: 'Source', hint: 'Publication name' },
   { key: 'date', label: 'Date', hint: 'e.g. March 2022' },
   { key: 'category', label: 'Category', hint: 'Review, Interview, or Feature' },

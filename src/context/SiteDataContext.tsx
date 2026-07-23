@@ -60,6 +60,7 @@ function blankWriting(): Writing {
     date: '',
     type: '',
     excerpt: '',
+    image: '',
     link: '',
   };
 }
@@ -71,6 +72,7 @@ function blankPress(): Press {
     source: '',
     date: '',
     quote: '',
+    author: '',
     category: 'Feature',
     link: '',
     exhibitionId: '',
@@ -204,6 +206,7 @@ export function SiteDataProvider({ children }: { children: React.ReactNode }) {
               field === 'reviewUrl' ||
               field === 'reviewLabel' ||
               field === 'artist' ||
+              field === 'author' ||
               field === 'caption' ||
               field === 'image' ||
               field === 'fullText')

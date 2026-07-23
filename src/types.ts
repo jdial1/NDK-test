@@ -24,6 +24,7 @@ export interface Writing {
   type: string;
   excerpt: string;
   fullText?: string;
+  image?: string;
   link?: string;
   amazonLink?: string;
   bamLink?: string;
@@ -35,6 +36,7 @@ export interface Press {
   source: string;
   date: string;
   quote: string;
+  author?: string;
   link?: string;
   category: 'Review' | 'Interview' | 'Feature';
   fullText?: string[];

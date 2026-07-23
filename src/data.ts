@@ -151,7 +151,8 @@ export const writingsData: Writing[] = [
     type: 'Exhibition Catalogue Chapters',
     excerpt: ' Northern New Mexico has long served as a locus of creative disruption, where the physical horizon meets spiritual ground. In this centennial catalogue, we unpack the thematic forces that have animated Taos’s artistic community, charting how artists have moved from literal representation to radical interior transcendence.',
     amazonLink: 'https://www.amazon.com/-/he/Nicole-Dial-Kay/dp/0890136769',
-    link: 'https://harwoodmuseum.org/centennial/book/'
+    link: 'https://harwoodmuseum.org/centennial/book/',
+    image: IMAGES.outOfTheBox,
   },
   {
     id: 'debbie-long-essay',
@@ -160,7 +161,8 @@ export const writingsData: Writing[] = [
     date: 'September 2021',
     type: 'Curatorial Essay',
     excerpt: 'Debbie Long’s Light-House does not merely display light; it collects, distills, and transmits it, making the sky itself the active agent. Unlike the coastal, industrial Light and Space artists of California, Long’s sanctuary is earthy, hand-hewn, and deeply responsive to the organic atmospheric properties of Northern New Mexico.',
-    link: 'https://harwoodmuseum.org/exhibition/debbie-long-light-ships/'
+    link: 'https://harwoodmuseum.org/exhibition/debbie-long-light-ships/',
+    image: IMAGES.debbieLong,
   },
   {
     id: 'gus-foster-panoramic',
@@ -169,7 +171,8 @@ export const writingsData: Writing[] = [
     date: 'October 2022',
     type: 'Exhibition Catalog Essay',
     excerpt: 'To stand in front of Gus Foster’s ten-foot panoramic prints is to experience a spatial displacement. Foster’s vintage Cirkut camera does not capture a split second; it captures time in rotation, mapping the landscape in a circular embrace that reveals the physical rigor of mountain summits and the silent majesty of southwestern plains.',
-    link: 'https://harwoodmuseum.org/exhibition/gus-foster-panoramic-photographs-of-northern-new-mexico/'
+    link: 'https://harwoodmuseum.org/exhibition/gus-foster-panoramic-photographs-of-northern-new-mexico/',
+    image: IMAGES.gusFoster,
   },
   {
     id: 'public-art-mountain',
@@ -178,7 +181,8 @@ export const writingsData: Writing[] = [
     date: 'May 2019',
     type: 'Critical Essay & Case Study',
     excerpt: 'Curating public contemporary art in mountain resort environments presents unique civic opportunities. By inserting temporary light-and-sound interventions into shared natural resources, we foster deep public dialogue on environment, accessibility, and community identity.',
-    link: 'https://www.summitdaily.com/news/new-wave-festival-illuminates-breckenridge/'
+    link: 'https://www.summitdaily.com/news/new-wave-festival-illuminates-breckenridge/',
+    image: 'https://harwoodmuseum.org/wp-content/uploads/sarah-steinkamp-featured.jpg',
   }
 ];
 
