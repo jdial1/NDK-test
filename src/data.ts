@@ -109,7 +109,7 @@ export const exhibitionsData: Exhibition[] = [
     location: 'Breckenridge Creative Arts, Breckenridge, CO',
     category: 'Festival',
     featured: false,
-    image: IMAGES.debbieLong,
+    image: 'https://swiftmedia.s3.amazonaws.com/mountain.swiftcom.com/images/sites/2/2016/08/22085307/WaveFestival-sdn-060116-1.jpg',
     description: 'An annual four-day festival curated by Breckenridge Creative Arts featuring large-scale, interactive contemporary light installations, digital art, projections, and spatial soundscapes by international and national artists. As Director of Exhibitions, Dial-Kay led the curation of centerpiece installations, converting the historic Blue River Plaza and waterfront parks into a massive, open-air contemporary art museum.',
     link: 'https://breckcreate.org/festivals',
     reviewUrl: 'https://www.summitdaily.com/explore-summit/wave-art-festival-makes-a-splash-in-breckenridge-next-week-with-interactive-installations/',
@@ -129,7 +129,7 @@ export const exhibitionsData: Exhibition[] = [
     location: 'Harwood Museum of Art, Taos, NM',
     category: 'Historical',
     featured: false,
-    image: IMAGES.outOfTheBox,
+    image: 'https://harwoodmuseum.org/wp-content/uploads/Harwood-Museum-Taos-Beatrice-Mandelman-Blue-Moon.jpeg',
     description: 'An ongoing, dynamic series of permanent collection reinstallations curated by Nicole Dial-Kay. The series establishes visual and conceptual conversations between mid-century Taos Moderns (including Agnes Martin, Clay Spohn, Emil Bisttram, Beatrice Mandelman, and Louis Ribak) and living contemporary artists working in New Mexico today.',
     link: 'https://harwoodmuseum.org/art/collections/taos-moderns/',
     reviewUrl: 'https://harwoodmuseum.org/art/collections/taos-moderns/',
@@ -182,7 +182,7 @@ export const writingsData: Writing[] = [
     type: 'Critical Essay & Case Study',
     excerpt: 'Curating public contemporary art in mountain resort environments presents unique civic opportunities. By inserting temporary light-and-sound interventions into shared natural resources, we foster deep public dialogue on environment, accessibility, and community identity.',
     link: 'https://www.summitdaily.com/news/new-wave-festival-illuminates-breckenridge/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/sarah-steinkamp-featured.jpg',
+    image: 'https://swiftmedia.s3.amazonaws.com/mountain.swiftcom.com/images/sites/2/2016/08/22085307/WaveFestival-sdn-060116-1.jpg',
   }
 ];
 
@@ -664,12 +664,12 @@ export const pressData: Press[] = [
   },
   {
     id: 'press-sliver-of-sun-alb-journal',
-    title: 'Alb. Journal',
+    title: 'Seeking a Sliver of Sun: Harwood Museum to Host First Solo Show by Bosnian Artist Maja Ruznic',
     source: 'Albuquerque Journal',
     date: '2024',
     quote: 'Press coverage related to sliver of sun.',
     category: 'Feature',
-    link: 'https://www.abqjournal.com/2369143/seeking-a-sliver-of-sun-ex-harwood-museum-to-host-first-solo-chow-by-bosnian-artist-maja-ruznic.html�',
+    link: 'https://www.abqjournal.com/2369143/seeking-a-sliver-of-sun-ex-harwood-museum-to-host-first-solo-chow-by-bosnian-artist-maja-ruznic.html',
     exhibitionId: 'sliver-of-sun',
   },
   {
@@ -829,7 +829,7 @@ export const pressData: Press[] = [
   },
   {
     id: 'press-las-santeras-taos-news',
-    title: 'Taos News',
+    title: 'Like a Phoenix from the Ashes: Taos Spring Arts Reinvents Itself',
     source: 'The Taos News',
     date: '2024',
     quote: 'Press coverage related to las santeras.',
@@ -1259,28 +1259,28 @@ export const pressData: Press[] = [
   },
   {
     id: 'press-santo-lowride-krqe-tv',
-    title: 'KRQE TV',
+    title: 'Upcoming Exhibit to Show Connection Between Lowriders and Spirituality',
     source: 'KRQE',
     date: '2024',
     quote: 'Press coverage related to santo lowride.',
     category: 'Feature',
-    link: 'https://www.krqe.com/news/new-mexico/upcoming-exhibit-to-show-connection-between-lowriders-and-spirituality/�',
+    link: 'https://www.krqe.com/news/new-mexico/upcoming-exhibit-to-show-connection-between-lowriders-and-spirituality/',
     exhibitionId: 'santo-lowride',
   },
   {
     id: 'press-santo-lowride-unm',
-    title: 'UNM',
+    title: 'Harwood Museum of Art Rolls Out Santo Lowride Exhibition',
     source: 'UNM News',
     date: '2024',
     quote: 'Press coverage related to santo lowride.',
     category: 'Feature',
-    link: 'http://news.unm.edu/news/harwood-museum-of-art-rolls-out-santo-lowride-exhibition',
+    link: 'https://news.unm.edu/news/harwood-museum-of-art-rolls-out-santo-lowride-exhibition',
     exhibitionId: 'santo-lowride',
   },
   {
     id: 'press-santo-lowride-taos-org',
-    title: 'taos.org',
-    source: 'Santo Lowride',
+    title: 'Santo Lowride: Norteño Car Culture and the Santos Tradition',
+    source: 'Taos.org',
     date: '2024',
     quote: 'Press coverage related to santo lowride.',
     category: 'Feature',
@@ -1289,17 +1289,17 @@ export const pressData: Press[] = [
   },
   {
     id: 'press-sliver-of-sun-art-today',
-    title: 'Art Today',
+    title: 'Maja Ruznic',
     source: 'artoday.it',
     date: '2024',
     quote: 'Press coverage related to sliver of sun.',
     category: 'Feature',
-    link: 'http://artoday.it/maja-ruznic',
+    link: 'https://artoday.it/maja-ruznic',
     exhibitionId: 'sliver-of-sun',
   },
   {
     id: 'press-sliver-of-sun-taos-news',
-    title: 'Taos News',
+    title: 'Maja Ruznic at the Harwood',
     source: 'The Taos News',
     date: '2024',
     quote: 'Press coverage related to sliver of sun.',
@@ -1309,7 +1309,7 @@ export const pressData: Press[] = [
   },
   {
     id: 'press-sliver-of-sun-taos-news-2',
-    title: 'Taos News',
+    title: 'Ghostly Paintings and Saints on Lowriders: Spring Preview at the Harwood',
     source: 'The Taos News',
     date: '2024',
     quote: 'Press coverage related to sliver of sun.',
@@ -1319,7 +1319,7 @@ export const pressData: Press[] = [
   },
   {
     id: 'press-sliver-of-sun-taos-news-3',
-    title: 'Taos News',
+    title: 'The Fusion of Art and Dance',
     source: 'The Taos News',
     date: '2024',
     quote: 'Press coverage related to sliver of sun.',
@@ -1711,7 +1711,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
     link: 'https://harwoodmuseum.org/art/collections/hispanic-traditions/',
     reviewUrl: 'https://southwestcontemporary.com/harwood-museum-unknown-santeros/',
     reviewLabel: 'Southwest Contemporary Exhibition Review',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/Harwood-Museum-Taos-Krissa-Maria-Lopez-Nuestra-Senora.jpeg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/Harwood-Museum-Taos-Nuestra-Senora-de-los-Dolores-Gift-of-Mabel-Dodge-Luhan.jpeg'
   },
   {
     id: 'nicholas-herrera',
@@ -1759,7 +1759,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
     link: 'https://harwoodmuseum.org/exhibition/remote-possibilities/',
     reviewUrl: 'https://southwestcontemporary.com/remote-possibilities-at-the-harwood-museum-of-art/',
     reviewLabel: 'Southwest Contemporary Exhibition Review',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/sarah-steinkamp-featured.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/jennifer-steinkamp.jpg'
   },
   {
     id: 'harwood-centennial-exhib',
@@ -1773,7 +1773,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Includes community memory booths and historical video oral histories.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/centennial/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/harwood-featured-final.png'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/harwood-100-exhibition-banner-2.jpg'
   },
   {
     id: 'buck-dunton',
@@ -1833,7 +1833,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Accompanied by ambient outdoor sound installations responsive to desert winds.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/debbie-long-light-ships/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/LEAD1.D-Willa-in-Landscape-700-pxls-wide.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/debbie-long.jpg'
   },
   {
     id: 'gus-foster-panorama-nm',
@@ -1847,7 +1847,7 @@ export const pastExhibitionsData: PastHarwoodExhibition[] = [
       'Explores environmental preservation efforts in regional high desert zones.'
     ],
     link: 'https://harwoodmuseum.org/exhibition/gus-foster-panoramic-photographs-of-northern-new-mexico/',
-    image: 'https://harwoodmuseum.org/wp-content/uploads/gus-foster-featured-image.jpg'
+    image: 'https://harwoodmuseum.org/wp-content/uploads/foster-christmas-eve-taos-pueblo-copy-72-dpi-scaled-1.jpeg'
   },
   {
     id: 'blue-lake-anniversary',
