@@ -1,7 +1,7 @@
 import { Exhibition, Writing, Press, Experience, Education, PastHarwoodExhibition, SiteData } from './types';
 
 export const IMAGES = {
-  portrait: 'https://harwoodmuseum.org/wp-content/uploads/Nicole.jpg',
+  portrait: 'https://harwoodmuseum.org/wp-content/uploads/Nicole_Headshot.jpg',
   outOfTheBox: 'https://harwoodmuseum.org/wp-content/uploads/harwood-featured-final.png',
   debbieLong: 'https://harwoodmuseum.org/wp-content/uploads/LEAD1.D-Willa-in-Landscape-700-pxls-wide.jpg',
   gusFoster: 'https://harwoodmuseum.org/wp-content/uploads/gus-foster-featured-image.jpg',

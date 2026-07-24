@@ -43,7 +43,17 @@ interface SiteDataContextValue {
   removeListItem: (key: ListKey, index: number) => void;
 }
 
-const SiteDataContext = React.createContext<SiteDataContextValue | null>(null);
+const SITE_DATA_CONTEXT_KEY = '__NDK_SITE_DATA_CONTEXT__';
+
+type SiteDataContextGlobal = typeof globalThis & {
+  [SITE_DATA_CONTEXT_KEY]?: React.Context<SiteDataContextValue | null>;
+};
+
+const SiteDataContext =
+  (globalThis as SiteDataContextGlobal)[SITE_DATA_CONTEXT_KEY] ??
+  React.createContext<SiteDataContextValue | null>(null);
+
+(globalThis as SiteDataContextGlobal)[SITE_DATA_CONTEXT_KEY] = SiteDataContext;
 
 function modeFromPath(pathname: string): ViewMode {
   const clean = pathname.replace(/\/+$/, '') || '/';

@@ -429,28 +429,36 @@ img {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: flex-start;
-    gap: 0;
+    gap: 120px;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     min-height: calc(100vh - var(--stage-pad-top) - 45px);
+    padding-right: 80px;
   }
 
   .about-copy {
-    flex: 0 0 auto;
-    white-space: normal;
-    margin-right: 80px;
-    min-width: min(410px, 100%);
+    flex: 0 0 900px;
+    width: 900px;
     max-width: 900px;
+    min-width: 900px;
+    margin-right: 0;
+    white-space: normal;
+  }
+
+  .about-copy .project-title {
+    max-width: 410px;
   }
 
   .about-columns {
+    width: 900px;
+    max-width: 900px;
+    height: 729px;
+    column-count: 2;
     column-width: 410px;
     column-gap: 80px;
     column-fill: auto;
-    height: min(729px, calc(100vh - var(--stage-pad-top) - 120px));
-    max-width: 900px;
   }
 
   .about-columns p {
@@ -466,7 +474,7 @@ img {
   .about-portrait {
     flex: 0 0 auto;
     width: auto;
-    height: min(777px, calc(100vh - var(--stage-pad-top) - 60px));
+    height: 777px;
   }
 
   .about-portrait img,

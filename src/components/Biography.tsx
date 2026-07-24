@@ -1,6 +1,14 @@
 import TemplateField, { TemplateBlock } from './TemplateField';
 import { useSiteData } from '../context/SiteDataContext';
 
+function obfuscateEmail(email: string): string {
+  const [local = '', domain = ''] = email.split('@');
+  const parts = domain.split('.').filter(Boolean);
+  const tld = parts.pop() || 'com';
+  const host = parts.join('.') || domain;
+  return `${local} [at] ${host} [dot] ${tld},`;
+}
+
 export default function Biography() {
   const { data, mode, previewing, diffing } = useSiteData();
   const live = mode === 'live' || (mode === 'edit' && (previewing || diffing));
@@ -16,9 +24,7 @@ export default function Biography() {
               <span className="para-break" />
               e:{' '}
               {live ? (
-                <a href={`mailto:${data.contactDetails.email}`}>
-                  <TemplateField path="contactDetails.email" />
-                </a>
+                obfuscateEmail(data.contactDetails.email)
               ) : (
                 <TemplateField path="contactDetails.email" />
               )}
